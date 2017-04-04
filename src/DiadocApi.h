@@ -162,6 +162,7 @@ public:
 
 	Diadoc::Api::Proto::Invoicing::RevocationRequestInfo ParseRevocationRequestXml(const Bytes_t& xmlContent);
 	Diadoc::Api::Proto::Invoicing::SignatureRejectionInfo ParseSignatureRejectionXml(const Bytes_t& xmlContent);
+	Diadoc::Api::Proto::Invoicing::InvoiceCorrectionRequestInfo ParseInvoiceCorrectionRequestXml(const Bytes_t& xmlContent);
 
 	Diadoc::Api::Proto::OrganizationList GetOrganizationsByInnKpp(const std::wstring& inn, const std::wstring& kpp = std::wstring(), bool includeRelations = false);
 

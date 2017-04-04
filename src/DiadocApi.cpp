@@ -970,6 +970,12 @@ SignatureRejectionInfo DiadocApi::ParseSignatureRejectionXml(const Bytes_t& xmlC
 	return FromProtoBytes<SignatureRejectionInfo>(PerformHttpRequest(L"/ParseSignatureRejectionXml", xmlContent, L"POST"));
 }
 
+InvoiceCorrectionRequestInfo DiadocApi::ParseInvoiceCorrectionRequestXml(const Bytes_t& xmlContent)
+{
+	WppTraceDebugOut("ParseInvoiceCorrectionRequestXml...");
+	return FromProtoBytes<InvoiceCorrectionRequestInfo>(PerformHttpRequest(L"/ParseInvoiceCorrectionRequestXml", xmlContent, L"POST"));
+}
+
 OrganizationList DiadocApi::GetOrganizationsByInnKpp(const std::wstring& inn, const std::wstring& kpp, bool includeRelations)
 {
 	WppTraceDebugOut("GetOrganizationsByInnKpp...");
